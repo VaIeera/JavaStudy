@@ -18,6 +18,11 @@ Java中最基本的一个存储结构。
 >boolean isSame = Arrays.equals(a,b);
 >注意：Arrays.equals()是比较数组内容，而a.equals(b) 这样的方法是比较地址值
 
+因为：
+
+>数组是Object的子类，a.equals(b) 使用的是 Object 类的 equals 方法，是比较地址值的
+
+>而 Arrays 的equals()方法与Object的不同，它能够进行数组内容的比较
 
 
 ### 2. Arrays.sort( )：用来对array进行排序。
@@ -34,8 +39,21 @@ Java中最基本的一个存储结构。
 注意这里使用Integer[ ]而非int[ ]，如果用int数组，它会提示你：“需要的是一个泛型T[ ]，而不是int[ ]” （这里不做讲解，你只要知道不能int就行了）
   
 #### * 实现Comparator接口
-
+直接：  
 ![](https://img-blog.csdnimg.cn/0e3ad1130adb4670afadb93814ff8e92.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5bCP5L2V4pSM,size_20,color_FFFFFF,t_70,g_se,x_16)
+
+实现接口之匿名内部类：  
+
+![](https://img-blog.csdnimg.cn/e5dd5f7415a0464fad57f92e290872f0.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5bCP5L2V4pSM,size_20,color_FFFFFF,t_70,g_se,x_16)
+
+实现接口之 lambda   
+可是你说，匿名内部类还是好麻烦啊！还要new,还要重写，那个大括号实在是分不清谁是谁啊！  
+JAVA工程师自然想到了这一点，Lambda表达式应运而生  
+![](https://img-blog.csdnimg.cn/44dc4c04c38447818517092effdf4220.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5bCP5L2V4pSM,size_20,color_FFFFFF,t_70,g_se,x_16)
+当然，如果{代码}里面只有一行的话，我们不妨大胆一点：   
+![](https://img-blog.csdnimg.cn/5c403855ba3e4466aa9ca47512d5bfca.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5bCP5L2V4pSM,size_20,color_FFFFFF,t_70,g_se,x_16)
+
+
 
 ### 3. binarySearch( )：在排好序的array中寻找元素。方法作用：在数组中查找元素  
 >int Arrays.binarySearch( Datatype[], Datatype key)  
