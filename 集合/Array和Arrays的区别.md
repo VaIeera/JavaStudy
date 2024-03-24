@@ -14,13 +14,19 @@ Java中最基本的一个存储结构。
 
 equals()：比较两个array是否相等。array拥有相同元素个数，且所有对应元素两两相等。
 
-sort()：用来对array进行排序。
+Arrays.sort()：用来对array进行排序。
+>int[] a = new int[5]{5，4，3，2，1};  
+>Arrays.sort(a); // 1 2 3 4 5  
+>System.out.println(Arrays.toString(a));  
+>// [1,2,3,4,5]  
 
 binarySearch()：在排好序的array中寻找元素。
 
 Arrays.asList(array):将数组array转化为List
 
 Arrays.toString（）：快速输出数组内容，可以偷偷懒。
->int[] a = {1,2,3,4,5};  
+>int[ ] a = {1,2,3,4,5};  
 >System.out.println(Arrays.toString(a));  
->// 输出格式：[1,2,3,4,5]  
+>// 输出格式：[1,2,3,4,5]
+
+
