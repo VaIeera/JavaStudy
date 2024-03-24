@@ -14,27 +14,27 @@ Java中最基本的一个存储结构。
 
 
 
-1. Arrays.equals()：比较两个array是否相等。array拥有相同元素个数，且所有对应元素两两相等。
+### 1. Arrays.equals()：比较两个array是否相等。array拥有相同元素个数，且所有对应元素两两相等。
 >boolean isSame = Arrays.equals(a,b);
 >注意：Arrays.equals()是比较数组内容，而a.equals(b) 这样的方法是比较地址值
 
 
 
-2. Arrays.sort()：用来对array进行排序。
+### 2. Arrays.sort()：用来对array进行排序。
 >int[ ] a = new int[5]{5，4，3，2，1};  
 >Arrays.sort(a); // 1 2 3 4 5  
 >System.out.println(Arrays.toString(a));  
 >// [1,2,3,4,5]
 如果要实现降序排列
-* Collections.reverseOrder()
+#### * Collections.reverseOrder()
 >Integer[ ] a = {1,2,3,4,5}  
 >Arrays.sort(a,Collections.reverseOrder())  
 >// 输出数组的内容即为：5 4 3 2 1  
 
   
-* 实现Comparator接口
+#### * 实现Comparator接口
 
-3. binarySearch()：在排好序的array中寻找元素。方法作用：在数组中查找元素  
+### 3. binarySearch()：在排好序的array中寻找元素。方法作用：在数组中查找元素  
 >int Arrays.binarySearch( Datatype[], Datatype key)  
 在数组中查找指定值，若找到，则返回此值的下标，
 
@@ -47,14 +47,14 @@ Java中最基本的一个存储结构。
 >Arrays.binarySearch(a,5)  //找到了！返回下标 1  
 只要返回值 ≥ 0 ，就代表找到了。
 
-4. Arrays.asList(array):将数组array转化为List
+### 4. Arrays.asList(array):将数组array转化为List
 
-5. Arrays.toString（）：快速输出数组内容，可以偷偷懒。
+### 5. Arrays.toString（）：快速输出数组内容，可以偷偷懒。
 >int[ ] a = {1,2,3,4,5};  
 >System.out.println(Arrays.toString(a));  
 >// 输出格式：[1,2,3,4,5]
 
-6.  Arrays.copyOf()作用：拷贝数组  
+### 6.  Arrays.copyOf()作用：拷贝数组  
 >public static void main(String[] args) {  
 >        int[] arr1 = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};  
 >        int[] arr2 = new int[5];  
