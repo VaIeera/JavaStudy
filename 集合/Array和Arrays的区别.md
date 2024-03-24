@@ -21,6 +21,6 @@ binarySearch()：在排好序的array中寻找元素。
 Arrays.asList(array):将数组array转化为List
 
 Arrays.toString（）：快速输出数组内容，可以偷偷懒。
->int[] a = {1,2,3,4,5};
->System.out.println(Arrays.toString(a));
->// 输出格式：[1,2,3,4,5]
+>int[] a = {1,2,3,4,5};  
+>System.out.println(Arrays.toString(a));  
+>// 输出格式：[1,2,3,4,5]  
