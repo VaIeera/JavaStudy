@@ -14,27 +14,30 @@ Java中最基本的一个存储结构。
 
 
 
-### 1. Arrays.equals()：比较两个array是否相等。array拥有相同元素个数，且所有对应元素两两相等。
+### 1. Arrays.equals( )：比较两个array是否相等。array拥有相同元素个数，且所有对应元素两两相等。
 >boolean isSame = Arrays.equals(a,b);
 >注意：Arrays.equals()是比较数组内容，而a.equals(b) 这样的方法是比较地址值
 
 
 
-### 2. Arrays.sort()：用来对array进行排序。
+### 2. Arrays.sort( )：用来对array进行排序。
 >int[ ] a = new int[5]{5，4，3，2，1};  
 >Arrays.sort(a); // 1 2 3 4 5  
 >System.out.println(Arrays.toString(a));  
->// [1,2,3,4,5]
-如果要实现降序排列
-#### * Collections.reverseOrder()
->Integer[ ] a = {1,2,3,4,5}  
->Arrays.sort(a,Collections.reverseOrder())  
->// 输出数组的内容即为：5 4 3 2 1  
+>// [1,2,3,4,5]  
 
+如果要实现降序排列
+#### * Collections.reverseOrder ()
+>Integer[ ] a = {1,2,3,4,5}  
+>Arrays.sort(a,Collections.reverseOrder( ))  
+>// 输出数组的内容即为：5 4 3 2 1    
+注意这里使用Integer[ ]而非int[ ]，如果用int数组，它会提示你：“需要的是一个泛型T[ ]，而不是int[ ]” （这里不做讲解，你只要知道不能int就行了）
   
 #### * 实现Comparator接口
 
-### 3. binarySearch()：在排好序的array中寻找元素。方法作用：在数组中查找元素  
+!(https://img-blog.csdnimg.cn/0e3ad1130adb4670afadb93814ff8e92.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5bCP5L2V4pSM,size_20,color_FFFFFF,t_70,g_se,x_16)
+
+### 3. binarySearch( )：在排好序的array中寻找元素。方法作用：在数组中查找元素  
 >int Arrays.binarySearch( Datatype[], Datatype key)  
 在数组中查找指定值，若找到，则返回此值的下标，
 
